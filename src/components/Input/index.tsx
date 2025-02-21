@@ -1,4 +1,4 @@
-import { ComponentProps } from "react";
+import type { ComponentProps } from 'react'
 
 interface IInputRootProps extends ComponentProps<'div'> {
   error?: boolean
@@ -28,15 +28,14 @@ export function InputRoot({ error = false, ...rest }: IInputRootProps) {
         data-[error=true]:border-danger
       "
       {...rest}
-    ></div>
+    />
   )
 }
 
-interface IInputIconProps extends ComponentProps<'span'> { }
+interface IInputIconProps extends ComponentProps<'span'> {}
 
 export function InputIcon({ ...rest }: IInputIconProps) {
   return (
-
     <span
       className="
         text-gray-400 
@@ -49,11 +48,10 @@ export function InputIcon({ ...rest }: IInputIconProps) {
   )
 }
 
-interface IInputFieldProps extends ComponentProps<'input'> { }
+interface IInputFieldProps extends ComponentProps<'input'> {}
 
 export function InputField({ ...rest }: IInputFieldProps) {
   return (
-
     <input
       className="
         flex-1 

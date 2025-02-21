@@ -1,10 +1,16 @@
-import { ComponentProps, HTMLAttributes, HTMLProps, ReactNode } from "react";
+import {
+  type ComponentProps,
+  HTMLAttributes,
+  HTMLProps,
+  ReactNode,
+} from 'react'
 
 interface IButtonProps extends ComponentProps<'button'> {}
 
 export function Button({ ...rest }: IButtonProps) {
   return (
-    <button className="
+    <button
+      className="
       w-full 
       h-12
       flex
@@ -21,7 +27,7 @@ export function Button({ ...rest }: IButtonProps) {
       hover:bg-blue
       hover:text-gray-900
     "
-    {...rest}
-  />
-  );
+      {...rest}
+    />
+  )
 }

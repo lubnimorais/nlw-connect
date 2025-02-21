@@ -1,11 +1,11 @@
-import { ComponentProps, ReactNode } from "react";
+import { type ComponentProps, ReactNode } from 'react'
 
 interface IIconButtonProps extends ComponentProps<'button'> {}
 
-
 export function IconButton({ ...rest }: IIconButtonProps) {
   return (
-    <button className="        
+    <button
+      className="        
       p-1.5 
       bg-gray-500 
       text-blue       
@@ -18,6 +18,5 @@ export function IconButton({ ...rest }: IIconButtonProps) {
     "
       {...rest}
     />
-      
-  );
+  )
 }
