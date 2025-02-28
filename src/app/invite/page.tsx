@@ -1,6 +1,14 @@
 import Image from 'next/image';
 
+import { Copy, Link } from 'lucide-react';
+
 import logo from '../../assets/logo.svg';
+
+import { InputField, InputIcon, InputRoot } from '@/components/Input';
+import { IconButton } from '@/components/IconButton';
+import { Stats } from './components/stats';
+import { Ranking } from './components/ranking';
+import { InviteLinkInput } from './components/invite-link-input';
 
 export default function InvitePage() {
   return (
@@ -30,8 +38,14 @@ export default function InvitePage() {
               inscrições:
             </p>
           </div>
+
+          <InviteLinkInput />
+
+          <Stats />
         </div>
       </div>
+
+      <Ranking />
     </div>
   );
 }
