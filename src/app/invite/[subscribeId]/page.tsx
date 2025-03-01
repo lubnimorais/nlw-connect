@@ -1,13 +1,19 @@
 import Image from 'next/image';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../../assets/logo.svg';
 
 import { Stats } from './components/stats';
 import { Ranking } from './components/ranking';
 import { InviteLinkInput } from './components/invite-link-input';
 
-export default function InvitePage() {
-  const inviteLink = 'http://localhost:3000/invite/510147958';
+type IInvitePageProps = {
+  params: Promise<{ subscribeId: string }>;
+};
+
+export default async function InvitePage({ params }: IInvitePageProps) {
+  const { subscribeId } = await params;
+
+  const inviteLink = `http://localhost:3333/invites/${subscribeId}`;
 
   return (
     <div className='min-h-dvh flex flex-col items-center justify-between gap-16 md:flex-row'>
